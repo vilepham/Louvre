@@ -273,7 +273,6 @@ footer{
 	.front-page{
 		padding-top: 20%;
 		padding-bottom: 40%;
-		min-height: 70%;
 	}
 	.front-text h1{
 		font-size: 3.5em;
@@ -350,25 +349,43 @@ footer{
 
 @media (max-width: 400px) {
 	.logo img{
-		width: 70%;
+		width: 50%;
 	}
 	.front-page{
-		padding-right: 5%;
+		padding-bottom: 20%;
+	}
+	.front-text h1{
+		font-size: 3em;
+	}
+	.front-text p{
+		font-size: 1em;
 	}
 
 	/* content content content content */
 	section{
-		margin: 5% 
+		margin: 5%;
 	}
 	.subheading{
-		font-size: 4.5rem;
+		font-size: 4rem;
 	
-		margin-bottom: 10%%;
+		margin-bottom: 10%;
 	}
 	h3, p{
 		line-height: 20px;
+		margin-bottom: 10px;
 	}
 
 	/* learn learn learn learn */
+	.box-2 h2, .box-6 h2{
+		float: none;
+		padding-left: 8%;
+		border-left: 3px solid var(--accent-clr);
+		border-right: none;
+	}
+	
+	.box-3 h2{
+		padding-left: 8%;
+		border-left: 3px solid var(--accent-clr);
+	}
 	
 }
