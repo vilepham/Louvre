@@ -347,7 +347,7 @@ footer{
 /*  Mobile Customization  */
 
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
 	.logo img{
 		width: 50%;
 	}
