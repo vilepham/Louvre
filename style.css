@@ -1,0 +1,361 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/*Desktop customization*/
+
+
+:root {
+	--primary-clr: blueviolet;
+	--secondary-clr: white;
+	--accent-clr: #d9a350;
+	--primary-font: Playfair Display;
+	--secondary-font: Anton;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	background-color: var(--primary-clr);
+	width: 100%;
+	margin: 0 auto;
+}
+
+header{
+	margin: 0 10% 10% 10%;
+}
+section{
+	margin: 1vh 10% 0 10%;
+}
+
+
+
+/*  navigation bar  */
+
+
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	max-width: 100%;
+	height: 15vh;
+	color: var(--secondary-clr);
+
+	font-family: sans-serif;
+    font-family: var(--primary-font);
+}
+
+.logo{
+	flex: 1;
+}
+
+.menu{
+	flex: 1;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-between;
+
+	list-style-type: none;
+}
+
+.nav-link{
+	text-decoration: none;
+	color: var(--secondary-clr)
+}
+
+.logo img{
+	width: 20vw;
+	filter: drop-shadow(white, 1px);
+}
+
+
+/*  landing page  */
+
+
+.front-page{
+	font-family: serif;
+    font-family: var(--primary-font);
+	color: var(--secondary-clr);
+	min-height: 50%;
+	margin-top: 10%;
+
+	animation: float-in 3s;
+}
+
+@keyframes float-in{
+	0%{
+		opacity: 0;
+		transform: translateY(20%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.front-text h1{
+	margin-bottom: 3vh;
+	font-family: sans-serif;
+	font-family: var(--secondary-font);
+	font-size: 4em;
+}
+
+.front-text p{
+	margin-bottom: 3vh;
+	font-size: 2.5em
+}
+
+button{
+	border: var(--accent-clr) solid 3px;
+	background-color: transparent;
+	color: var(--secondary-clr);
+	text-decoration: none;
+	text-align: center;
+
+	display: inline-block;
+	padding: 2%;
+	margin-top: 1%;
+
+	font-family: serif;
+	font-family: var(--primary-font);
+	font-size: 1rem;
+	font-stretch: expanded;
+}
+
+button:hover{
+	cursor: pointer;
+	transform: translateY(-2%);
+}
+
+
+/*  content pages  */
+
+
+.subheading{
+	font-style: italic;
+	font-size: 6rem;
+
+	margin-bottom: 5%;
+}
+
+highlight{
+	color: var(--accent-clr);
+
+	margin-right: 1%;
+}
+
+h2{
+	font-family: sans-serif;
+	font-family: var(--secondary-font);
+	font-size: 1.5rem;
+}
+
+h3{
+	font-weight: normal;
+	font-size: 1.25em;
+}
+
+.sections{
+	background-color: var(--secondary-clr);
+	padding-top: 5%;
+	padding-bottom: 10%;
+}
+
+/*  learn section  */
+
+
+.box-grids{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.box{
+	width: 50%;
+}
+
+.box img{
+	width: 100%;
+}
+
+.box h2{
+	font-size: 3rem;
+}
+.box-2 h2, .box-6 h2{
+	float: right;
+	padding-right: 8%;
+	border-right: 3px solid var(--accent-clr);
+}
+
+.box-3 h2{
+	padding-left: 8%;
+	border-left: 3px solid var(--accent-clr);
+}
+
+/*  access section  */
+
+
+.map{
+	display: flex;
+	margin-top: 5%;
+}
+
+.map div{
+	flex:1;
+	font-family: sans-serif;
+	font-family: var(--secondary-font);
+	font-size: 4vh;
+	align-content: center;
+
+	display: flex;
+}
+
+.fas fa-map-pin{
+	width: 10%;
+	margin-right: 5%;
+}
+
+.map iframe{
+	flex:1;
+}
+
+
+/*floating back to top button*/
+
+
+.additional-elm{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 99;
+	
+	background-color: var(--secondary-clr);
+	border-radius: 50%;
+}
+i{
+	color: var(--accent-clr);
+}
+
+.fas fa-arrow-up{
+	padding: 2%;
+
+	font-size: 2rem;
+}
+
+/*footer*/
+
+
+footer{
+	text-align: center;
+	color: var(--secondary-clr);
+	padding: 5%;
+}
+
+/*  Tablet Customization  */
+
+@media screen and (max-width: 768px) {
+
+
+	/* landing page landing page landing page */
+	.logo img{
+		width: 30vw;
+	}
+	.menu{
+		display: none;
+	}
+	.front-page{
+		padding-top: 20%;
+		padding-bottom: 40%;
+		min-height: 70%;
+	}
+	.front-text h1{
+		font-size: 3.5em;
+	}
+	.front-text p{
+		font-size: 1.5em;
+	}
+
+	/* content content content content */
+	.subheading{
+		font-size: 5rem;
+	
+		margin-bottom: 5%;
+	}
+	h2{
+		margin-bottom: 20px;
+		margin-top: 30px;
+	}
+
+	/* learn learn learn learn */
+	
+	.box-grids{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.box{
+		width: 100%;
+	}
+
+	.box img{
+		width: 100%;
+	}
+
+	.box h2{
+		font-size: 3rem;
+	}
+	.box-2{
+		order: 1;
+	}
+	.box-1{
+		order: 2;
+	}
+	.box-3{
+		order: 3;
+	}
+	.box-4{
+		order: 4;
+	}
+	.box-6{
+		order: 5;
+	}
+	.box-5{
+		order: 6;
+	}
+
+	/* access access access access */
+	.map{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	
+	.map div{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+
+/*  Mobile Customization  */
+
+
+@media screen and (max-width: 450px) {
+	.logo img{
+		width: 50%;
+	}
+
+	/* content content content content */
+
+	/* learn learn learn learn */
+	
+}
