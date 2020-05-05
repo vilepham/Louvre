@@ -261,7 +261,7 @@ footer{
 
 /*  Tablet Customization  */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
 
 
 	/* landing page landing page landing page */
@@ -295,7 +295,7 @@ footer{
 	}
 
 	/* learn learn learn learn */
-	
+
 	.box-grids{
 		display: flex;
 		flex-wrap: wrap;
