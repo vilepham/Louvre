@@ -329,7 +329,6 @@ footer{
 	
 		clip-path: circle(100px at 120% -50%);
 		-webkit-clip-path: circle(100px at 120% -50%);
-		transition: all 1s ease-out;
 	}
 	
 	.nav-links.open{
@@ -337,14 +336,6 @@ footer{
 		-webkit-clip-path: circle(2000px at 90% -30%);
 	}
 
-	.nav-links.open .l2{
-		transform: translateX(50%)
-	}
-	.nav-links.open .l1{
-		transform: rotate(45deg);
-	}
-	.nav-links.open .l3{
-		transform: rotate(-45deg);
 	}
 	.nav-links a:hover{
 		cursor: pointer;
@@ -411,7 +402,7 @@ footer{
 
 	/* learn learn learn learn */
 	.boxes h2{
-		font-size: 18px;
+		font-size: 20px;
 	
 		padding-left: 3%;
 		border-left: 7px solid var(--accent-clr)
