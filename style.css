@@ -4,9 +4,7 @@
 	box-sizing: border-box;
 }
 
-
 /*Desktop customization*/
-
 
 :root {
 	--primary-clr: blueviolet;
@@ -33,22 +31,22 @@ section{
 	margin: 1vh 10% 5% 10%;
 }
 
-
-
 /*  navigation bar  */
-
 
 .nav{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
+	position: relative;
+	z-index: 999;
+
 	width: 100%;
 	height: 15vh;
 	color: var(--secondary-clr);
 
 	font-family: sans-serif;
-    font-family: var(--primary-font);
+	font-family: var(--primary-font);
 }
 
 .logo{
@@ -83,12 +81,19 @@ section{
 
 
 .front-page{
+	position: relative;
+	height: 60vh;
+
 	font-family: serif;
-    font-family: var(--primary-font);
+	font-family: var(--primary-font);
 	color: var(--secondary-clr);
 	min-height: 50%;
 	margin-top: 10%;
+}	
 
+.front-text{
+	position: absolute;
+	z-index: 999;
 	animation: float-in 3s;
 }
 
@@ -137,6 +142,13 @@ button:hover{
 	transform: translateY(2%);
 }
 
+.front-img{
+	position: absolute;
+	top: -35vh;
+	left: -100vh;
+	z-index: -1;
+
+}
 
 /*  content pages  */
 
@@ -275,10 +287,8 @@ footer{
 	padding: 5%;
 }
 
-/*  Tablet Customization  */
-
+/*  Tablet View  */
 @media screen and (max-width: 768px) {
-
 	/* landing page landing page landing page */
 	.logo img{
 		width: 30vw;
@@ -310,7 +320,6 @@ footer{
 		background: var(--accent-clr);
 		margin: 5px;
 	}
-	
 	.nav-links{
 		display: flex;
 		flex-direction: column;
@@ -318,34 +327,37 @@ footer{
 		justify-content: space-around;
 		height: 85vh;
 		width: 110%;
-	
+
 		position: fixed;
 		top: 15vh;
 		left:-5%;
-	
+
 		background-color: var(--primary-clr);
 		text-decoration: none;
 		list-style: none;
-	
+
 		clip-path: circle(100px at 120% -50%);
 		-webkit-clip-path: circle(100px at 120% -50%);
 	}
-	
 	.nav-links.open{
 		clip-path: circle(2000px at 90% -30%);
 		-webkit-clip-path: circle(2000px at 90% -30%);
-	}
-
 	}
 	.nav-links a:hover{
 		cursor: pointer;
 		transform: translateY(2%);
 	}
-	
+	.front-page{
+		height: 100vh;
+	}
+	.front-img{
+		left: -170vh;	
+	}
+
 	/* content content content content */
 	.subheading{
 		font-size: 5rem;
-	
+
 		margin-bottom: 10vh;
 	}
 	#explore h2{
@@ -359,40 +371,41 @@ footer{
 		flex-wrap: wrap;
 		flex-direction: column;
 	}
-	
 	.map div{
 		width: 100%;
 		margin-bottom: 20px;
 
-		 font-size: 3vh;
+		font-size: 3vh;
 	}
 }
 
+/*  Mobile View  */
 
-/*  Mobile Customization  */
 
-
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
 	.logo img{
-		width: 50%;
+		width: 80%;
 	}
 	.front-page{
 		padding-bottom: 20%;
+		height: 100vh;
 	}
 	.front-text h1{
-		font-size: 3em;
+		font-size: 2em;
 	}
 	.front-text p{
 		font-size: 1em;
 	}
-
+	.front-img{
+		display: none;
+	}
 	/* content content content content */
 	section{
 		margin: 5%;
 	}
 	.subheading{
 		font-size: 40px;
-	
+
 		margin-bottom: 10%;
 	}
 	h3{
@@ -403,9 +416,8 @@ footer{
 	/* learn learn learn learn */
 	.boxes h2{
 		font-size: 30px;
-	
+
 		padding-left: 3%;
 		border-left: 7px solid var(--accent-clr)
 	}
-
 }
